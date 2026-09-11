@@ -1,0 +1,38 @@
+providers:
+  mock:
+    type: mock
+
+  qwen:
+    type: openai_compatible
+    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    api_key_env: DASHSCOPE_API_KEY
+    timeout: 60
+    mock_fallback: true
+
+  qwen_coder:
+    type: qwen_coder
+    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    api_key_env: DASHSCOPE_API_KEY
+    timeout: 60
+    mock_fallback: true
+
+roles:
+  ATTACK_GENERATOR:
+    provider: qwen
+    model: qwen2.5-instruct
+
+  SECURITY_ANALYST:
+    provider: qwen
+    model: qwen2.5-instruct
+
+  JUDGE:
+    provider: qwen
+    model: qwen2.5-instruct
+
+  CODE_REASONER:
+    provider: qwen_coder
+    model: qwen2.5-coder-instruct
+
+  REPORT_GENERATOR:
+    provider: qwen
+    model: qwen2.5-instruct
