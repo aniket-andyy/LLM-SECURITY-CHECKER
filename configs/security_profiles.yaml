@@ -1,0 +1,39 @@
+quick:
+  max_attacks: 5
+  max_iterations: 5
+  timeout: 20
+  max_errors: 3
+  categories:
+    - prompt_injection
+    - disclosure
+
+standard:
+  max_attacks: 12
+  max_iterations: 12
+  timeout: 30
+  max_errors: 5
+  categories:
+    - prompt_injection
+    - disclosure
+    - agency
+
+deep:
+  max_attacks: 25
+  max_iterations: 25
+  timeout: 45
+  max_errors: 8
+  categories:
+    - prompt_injection
+    - disclosure
+    - agency
+    - adaptive
+
+custom:
+  max_attacks: 10
+  max_iterations: 10
+  timeout: 30
+  max_errors: 5
+  categories:
+    - prompt_injection
+    - disclosure
+    - agency
