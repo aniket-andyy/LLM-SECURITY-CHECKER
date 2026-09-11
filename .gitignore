@@ -1,0 +1,27 @@
+# Secrets
+.env
+*.pem
+*.key
+*.crt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Local state
+*.sqlite
+*.db
+*.log
+logs/
+tmp/
+state/
+
+# IDE
+.idea/
+.vscode/ 
